@@ -25,13 +25,23 @@ $(document).ready(function () {
     $('.image-list').append(html);
     $('.form-input-title').val("");
     $('.form-input-url').val("");
-    console.log(index);
+  }
+
+  function delete_image (number) {
+    images[number -1] = {};
+    $(`[data-image-number="${number}"]`).hide();
   }
 
   $('.js-add-image').click(function () {
     add_image($('.form-input-title').val(), $('.form-input-url').val());
     $.modal.close();
-
   });  
+
+  $(document).on("click", '.image-link-delete', function () {
+    let index = $(this).attr('data-delete-image');
+    delete_image(index);
+  });
+
+  add_image("Flowers", "https://pp.userapi.com/c7002/v7002629/45aba/VbIFThSetis.jpg");  
 
 });

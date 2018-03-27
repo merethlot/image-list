@@ -27,9 +27,19 @@ $(document).ready(function () {
     $('.form-input-url').val("");
   }
 
+  function delete_image (number) {
+    images[number -1] = {};
+    $(`[data-image-number="${number}"]`).hide();
+  }
+
   $('.js-add-image').click(function () {
     add_image($('.form-input-title').val(), $('.form-input-url').val());
     $.modal.close();
   });  
+
+  $(document).on("click", '.image-link-delete', function () {
+    let index = $(this).attr('data-delete-image');
+    delete_image(index);
+  });
 
 });
