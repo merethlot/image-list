@@ -26,6 +26,9 @@ body {
   display: flex;
   align-items: center;
   font-weight: bold;
+  @media (max-width: @screen-sm) {
+    justify-content: center;
+  }
 }
 
 .header-logo {
@@ -33,6 +36,9 @@ body {
   height: 40px;
   border-radius: 50%;
   background-color: #000;
+  @media (max-width: @screen-sm) {
+    display: none;
+  }
 }
 
 .header-brand {
@@ -97,24 +103,50 @@ body {
   }
   &-delete {
     color: @colour-red;
+    @media (max-width: @screen-sm) {
+      position: absolute;
+      height: 190px;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      opacity: 0;
+      filter: alpha(opacity=0);
+      display: flex;
+      justify-content: center;
+      align-items: center;    
+      background-color: fade(@colour-red, 80%);
+      &:hover {
+        opacity: 1;
+        filter: alpha(opacity=100);
+      }
+    }
   }
 }
 
 .image {
   &-container {
     margin: 20px 0 50px;
+    position: relative;
+    
   }
   &-block {
     border: 1px solid @colour-gray;
     height: 434px;
     display: flex;
     flex-direction: column;
+    @media (max-width: @screen-sm) {
+      height: 225px;
+    }
     &-heading {
       border-bottom: 1px solid @colour-gray;
       padding: 22px;
       display: flex;
       justify-content: space-between;
       font-weight: bold;
+      @media (max-width: @screen-sm) {
+        padding: 8px 22px;
+        justify-content: center;
+      }
     }
   }
   &-picture {
