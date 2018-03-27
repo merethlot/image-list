@@ -4,11 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Image list</title>
+  <link rel="stylesheet" href="vendor/jquery.modal.css">
   <link rel="stylesheet" href="css/application.css">
   <script src="vendor/jquery.js"></script>
+  <script src="vendor/jquery.modal.js"></script>
   <script src="js/application.js"></script>
 </head>
 <body>
-  
+  <div id="modal-add-image" class="modal">
+    <div class="form form-modal">
+      <div class="form-group">
+        <input type="text" placeholder="Name" class="form-input-name form-input">
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="URL" class="form-input-url form-input">
+      </div>
+    </div>
+    <a href="#" rel="modal:close">Close</a>
+    <a href="#">Add</a>
+  </div>
+  <header class="site-header">
+    <div class="header-logo"></div>
+    <div class="header-brand">Images</div>
+  </header>
+  <section class="site-layout">
+    <a href="#modal-add-image" rel="modal:open">New</a>
+    <div class="image-list">
+      <div class="image-container" data-image-number="">
+        <div class="image-block">
+          <div class="image-block-heading">
+            <div class="image-name"></div>
+            <div class="link link-delete" data-image-delete=""></div>
+          </div>
+          <div class="image-img" data-image-delete=""></div>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
