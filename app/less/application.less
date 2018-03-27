@@ -1,1 +1,34 @@
 @import "reset.less";
+@import "variables.less";
+
+body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  background-color: #fff;
+  color: #000;
+  min-height: 100vh;
+}
+
+.site-header {
+  flex: 0 0 66px;
+  border-bottom: 1px solid @colour-gray;
+  padding: 13px;
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #000;
+}
+
+.header-brand {
+  padding-left: 13px;
+}
+
+.site-layout {
+  flex: 1 0 auto;
+}
