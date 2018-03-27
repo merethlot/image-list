@@ -1,9 +1,35 @@
-
-
 $(document).ready(function () {
   "use strict";
   $.modal.defaults = {
     closeExisting: false,
     showSpinner: false
   };
+
+  var images = [];
+
+  function add_image (title, url) {
+    let image = {};
+    image.title = title;
+    image.url = url;
+    let index = images.push(image);
+    let html = '';
+    html += `<div class="image-container" data-image-number="${index}">`;
+    html += '<div class="image-block">';
+    html += '<div class="image-block-heading">';
+    html += `<div class="image-title">${image.title}</div>`;
+    html += `<div class="link link-delete image-link-delete" data-delete-image="${index}">Delete</div>`;
+    html += '</div>';
+    html += `<div class="image-picture" style="background-image:url(${image.url}); height:100px"></div>`;
+    html += '</div>';
+    html += '</div>';
+    $('.image-list').append(html);
+    $('.form-input-title').val("");
+    $('.form-input-url').val("");
+  }
+
+  $('.js-add-image').click(function () {
+    add_image($('.form-input-title').val(), $('.form-input-url').val());
+    $.modal.close();
+  });  
+
 });
