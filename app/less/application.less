@@ -10,6 +10,14 @@ body {
   min-height: 100vh;
 }
 
+.container {
+  margin: 24px auto;
+  width: 745px;
+  @media (max-width: @screen-sm) {
+    width: 280px;
+  }
+}
+
 .site-header {
   flex: 0 0 66px;
   border-bottom: 1px solid @colour-gray;
