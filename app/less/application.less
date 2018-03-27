@@ -90,3 +90,41 @@ body {
     }
   }
 }
+
+.link {
+  &:hover {
+    cursor: pointer;
+  }
+  &-delete {
+    color: @colour-red;
+  }
+}
+
+.image {
+  &-container {
+    margin: 20px 0 50px;
+  }
+  &-block {
+    border: 1px solid @colour-gray;
+    height: 434px;
+    display: flex;
+    flex-direction: column;
+    &-heading {
+      border-bottom: 1px solid @colour-gray;
+      padding: 22px;
+      display: flex;
+      justify-content: space-between;
+      font-weight: bold;
+    }
+  }
+  &-picture {
+    display: flex;
+    flex: 1 1 auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+  }
+  &-link-delete {
+    font-size: 0.9em;
+  }
+}
