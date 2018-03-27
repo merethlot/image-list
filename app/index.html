@@ -12,28 +12,31 @@
 </head>
 <body>
   <div id="modal-add-image" class="modal">
+    <div class="modal-title">
+      New Image
+    </div>
     <div class="form form-modal">
       <div class="form-group">
-        <input type="text" placeholder="Name" class="form-input-name form-input">
+        <input type="text" placeholder="Title" class="form-input-title form-input">
       </div>
       <div class="form-group">
         <input type="text" placeholder="URL" class="form-input-url form-input">
       </div>
     </div>
-    <a href="#" rel="modal:close">Close</a>
-    <a href="#">Add</a>
+    <a href="#" rel="modal:close" class="btn btn-default">Close</a>
+    <a href="#" class="btn btn-success">Add</a>
   </div>
   <header class="site-header">
     <div class="header-logo"></div>
     <div class="header-brand">Images</div>
   </header>
   <section class="site-layout container">
-    <a href="#modal-add-image" rel="modal:open">New</a>
+    <a href="#modal-add-image" rel="modal:open" class="btn btn-success">New</a>
     <div class="image-list">
       <div class="image-container" data-image-number="">
         <div class="image-block">
           <div class="image-block-heading">
-            <div class="image-name"></div>
+            <div class="image-title"></div>
             <div class="link link-delete" data-image-delete=""></div>
           </div>
           <div class="image-img" data-image-delete=""></div>

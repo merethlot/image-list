@@ -40,3 +40,40 @@ body {
 .site-layout {
   flex: 1 0 auto;
 }
+
+.btn(@bdc: #000, @c: #000) {
+  text-transform: uppercase;
+  border-radius: 6px;
+  border: 1px solid;
+  padding: 14px 28px;
+  text-decoration: none;
+  border-color: @bdc;
+  color: @c;
+}
+
+.btn-default {
+  .btn;
+}
+
+.btn-success {
+  .btn(@colour-green, @colour-green);
+}
+
+.modal {
+  padding: 50px 75px;
+  &-title {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
+
+.form {
+  &-group {
+    margin-bottom: 40px;
+  }
+  &-input {
+    display: block;
+    border: 1px solid #000;
+    padding: 16px 25px;
+  }
+}
