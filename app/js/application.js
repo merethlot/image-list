@@ -42,4 +42,7 @@ $(document).ready(function () {
     delete_image(index);
   });
 
+  add_image("Flowers", "https://pp.userapi.com/c7002/v7002629/45aba/VbIFThSetis.jpg");
+  add_image("Ship", "https://pp.userapi.com/c841231/v841231806/32d69/8lMq4oahiho.jpg");
+
 });
